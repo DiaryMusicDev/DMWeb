@@ -1,21 +1,27 @@
 ﻿@inherits LayoutComponentBase
+@using DMWeb.Utils
+<div class="page" data-theme="@(Theme.Themes[Theme.Themeoption])">
+	<div class="sidebar">
+		<NavMenu />
+	</div>
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+	<main>
+		<TopBar />
 
-    <main>
-        <TopBar />
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
+		<article class="content px-4">
+			@Body
+		</article>
+	</main>
 </div>
 
 <div id="blazor-error-ui">
-    An unhandled error has occurred.
-    <a href="" class="reload">Reload</a>
-    <a class="dismiss">🗙</a>
+	An unhandled error has occurred.
+	<a href="" class="reload">Reload</a>
+	<a class="dismiss">🗙</a>
 </div>
+@code{
+	protected override void OnInitialized(){
+		//添加判断
+		Theme.Themeoption = (int)Theme.ThemeOption.Light;
+	}
+}

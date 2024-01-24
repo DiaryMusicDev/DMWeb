@@ -1,1 +1,1 @@
-npx tailwindcss -i ./wwwroot/app.css -o ./wwwroot/dist/output.css --watch
+#npx tailwindcss -i ./wwwroot/app.css -o ./wwwroot/dist/output.css --watch
