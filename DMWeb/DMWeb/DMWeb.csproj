@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="PowerShell ./tailwindcli-init.ps1" />
   </Target>
 
 </Project>

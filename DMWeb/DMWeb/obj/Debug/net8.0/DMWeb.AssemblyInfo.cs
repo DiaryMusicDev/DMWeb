@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DMWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec51350e749fd333f1f786d7622332163fa1b93b")]
 [assembly: System.Reflection.AssemblyProductAttribute("DMWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DMWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
