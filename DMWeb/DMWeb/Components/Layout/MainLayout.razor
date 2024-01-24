@@ -1,27 +1,41 @@
-﻿@inherits LayoutComponentBase
-@using DMWeb.Utils
-<div class="page" data-theme="@(Theme.Themes[Theme.Themeoption])">
-	<div class="sidebar">
-		<NavMenu />
-	</div>
+﻿@using DMWeb.Utils
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inherits LayoutComponentBase
+@inject ProtectedLocalStorage ProtectedLocalStorage
 
-	<main>
-		<TopBar />
+<div class="page" data-theme="@(MainTheme)">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
 
-		<article class="content px-4">
-			@Body
-		</article>
-	</main>
+    <main>
+        <TopBar />
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
 </div>
 
 <div id="blazor-error-ui">
-	An unhandled error has occurred.
-	<a href="" class="reload">Reload</a>
-	<a class="dismiss">🗙</a>
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
 </div>
-@code{
-	protected override void OnInitialized(){
-		//添加判断
-		Theme.Themeoption = (int)Theme.ThemeOption.Dark;
-	}
+@code {
+    Theme theme = new();
+    public string? MainTheme;
+    protected override async Task OnInitializedAsync()
+    {
+        //添加判断
+        // Theme.Themeoption = (int)Theme.ThemeOption.Dark;
+        // var value = await ProtectedLocalStorage.GetAsync<string>("theme");
+        // MainTheme = value.Value;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        var value = await ProtectedLocalStorage.GetAsync<string>("theme");
+        MainTheme = value.Value;
+    }
 }

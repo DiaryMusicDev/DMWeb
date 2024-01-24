@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UQ9YP86E0c8VT/VvqnbkXRw00bbHAyRfqSwME/euqDyAYxQdnGbVpvRxUKOdru9RADylPo+pmEE+0WIcJReZIA==",
+  "dgSpecHash": "H+kue1CogKXQ/QxUtFq5bUr0R2wj7V5xoSiIsiIRKtCRwIvI51Dv/wT9uTUIGxeWKJJsQVOxBzMw2tzqDPL3Ug==",
   "success": true,
   "projectFilePath": "E:\\DMWeb\\DMWeb\\DMWeb\\DMWeb.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sout\\.nuget\\packages\\blazored.localstorage\\4.4.0\\blazored.localstorage.4.4.0.nupkg.sha512",
     "C:\\Users\\sout\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.0\\microsoft.aspnetcore.authorization.8.0.0.nupkg.sha512",
     "C:\\Users\\sout\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.0\\microsoft.aspnetcore.components.8.0.0.nupkg.sha512",
     "C:\\Users\\sout\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.0\\microsoft.aspnetcore.components.analyzers.8.0.0.nupkg.sha512",
