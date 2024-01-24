@@ -1,0 +1,53 @@
+﻿@page "/counter"
+@using System.Threading
+@rendermode InteractiveAuto
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Status: @(isIntervaling?"Counting":"Stop"), Current count: @currentCount</p>
+@if (isIntervaling)
+{
+    <span>倒计时：@interval</span>
+    <span>当前cps：@(currentCount/interval)</span>
+}
+<span></span>
+<button class="btn btn-primary" @onclick="ClickHandle">Click me</button>
+@code {
+    private int currentCount = 0;
+
+
+    public bool isIntervaling { get; set; }
+
+    public int interval = 10;
+    public void ClickHandle()
+    {
+        void stop()
+        {
+            
+        }
+        if (!isIntervaling)
+        {
+        public Timer timer = new Timer(new TimerCallback(_ =>
+        {
+        if (interval <= 0)
+        {
+            stop();
+        }
+                if (interval <= 10)
+                {
+                    interval--;
+                    StateHasChanged();
+                    
+                }
+            }), null, 1000, 1000);
+            isIntervaling = true;
+        }
+        else
+        {
+            if(isIntervaling) currentCount++;
+        }
+        
+    }
+}
