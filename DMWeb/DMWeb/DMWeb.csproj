@@ -10,9 +10,9 @@
     <ProjectReference Include="..\DMWeb.Client\DMWeb.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />
   </ItemGroup>
-
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+<!--  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="PowerShell ./tailwindcli-init.ps1" />
-  </Target>
+  </Target>-->
+
 
 </Project>
