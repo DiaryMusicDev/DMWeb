@@ -1,5 +1,9 @@
-﻿using DMWeb.Client.Pages;
+﻿using Blazored.LocalStorage;
+using DMWeb.Client.Pages;
 using DMWeb.Components;
+using DMWeb.Utils;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.AspNetCore.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,4 +36,20 @@ app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(Counter).Assembly);
 
+//var lsBuilder = WebAssemblyHostBuilder.CreateDefault(args);
+//lsBuilder.RootComponents.Add<App>("app");
+
+//lsBuilder.Services.AddBlazoredLocalStorage();
+
+//await lsBuilder.Build().RunAsync();
+static IHostBuilder CreateHostBuilder(string[] args) =>
+    Host.CreateDefaultBuilder(args)
+        .ConfigureServices((hostContext, services) =>
+        {
+            services.AddScoped<ThemeService>();
+        });
+/*        .ConfigureWebHostDefaults(webBuilder =>
+        {
+            webBuilder.UseStartup<StartupBase>();
+        });*/
 app.Run();
