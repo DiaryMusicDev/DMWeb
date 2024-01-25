@@ -17,9 +17,9 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
   </ItemGroup>
-<!--  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="PowerShell ./tailwindcli-init.ps1" />
-  </Target>-->
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+   <!--<Exec Command="PowerShell ./tailwindcli-init.ps1" />-->
+ </Target>
 
 
 </Project>
