@@ -13,7 +13,7 @@
         <div>
             <label class="swap swap-rotate btn btn-ghost btn-circle">
 
-                <input onclick="" type="checkbox" />
+                <input @onclick=Toggle  type="checkbox" />
 
                 <!-- sun icon -->
                 <svg class="swap-on fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -63,7 +63,7 @@
     [Parameter]
     public EventCallback<string> OnToggled { get; set; }
 
-    private async Task Toggle()
+    public async Task Toggle()
     {
         // 触发事件并将数据传递给父组件
         await OnToggled.InvokeAsync("Hello from child component!");
