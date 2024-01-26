@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                <p class="p-2 font-bold">欢迎导管</p>
+                <p class="p-2 font-bold">欢迎</p>
                 <ul>
                     <li><a>Profile</a></li>
                     <li><a>Settings</a></li>
@@ -66,6 +66,7 @@
     public async Task Toggle()
     {
         // 触发事件并将数据传递给父组件
-        await OnToggled.InvokeAsync("Hello from child component!");
+        await OnToggled.InvokeAsync("Hello");
+        Console.WriteLine("Test");
     }
 }

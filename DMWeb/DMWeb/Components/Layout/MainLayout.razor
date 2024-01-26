@@ -2,13 +2,14 @@
 @using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
 @inherits LayoutComponentBase
 @inject ProtectedLocalStorage ProtectedLocalStorage
+
 <div class="page" data-theme="">
     <div class="sidebar">
         <NavMenu />
     </div>
 
     <main>
-        <TopBar OnToggled="HandleToggle" />
+        <TopBar OnToggled=HandleToggle />
 
         <article class="content px-4">
             @Body
